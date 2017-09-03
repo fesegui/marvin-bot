@@ -7,12 +7,14 @@ import json
 from flask import Flask, request
 from messenger import MessengerClient
 from messenger.content_types import TextMessage
+from bot import Bot
 
 
 FACEBOOK_VERIFICATION_TOKEN = os.environ.get('FACEBOOK_VERIFICATION_TOKEN')
 FACEBOOK_PAGE_TOKEN = os.environ.get('FACEBOOK_PAGE_TOKEN')
 
 app = Flask(__name__)
+bot = Bot()
 client = MessengerClient(FACEBOOK_PAGE_TOKEN)
 
 
@@ -36,7 +38,9 @@ def handle_messages():
                 print('[INFO] message:', message)
                 sender_id = message['sender']['id']
                 text = message['message']['text']
-                client.send(sender_id, text)
+                reply = bot.reply(sender_id, text)
+                print('[INFO] reply:', reply)
+                client.send(sender_id, TextMessage(reply))
     return 'OK'
 
 if __name__ == '__main__':

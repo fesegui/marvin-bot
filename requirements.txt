@@ -1,4 +1,6 @@
 Flask==0.12.2
 gunicorn==19.6.0
 mlabs-messenger==0.1.2
+redis==2.10.6
 requests==2.18.3
+rivescript==1.14.7
