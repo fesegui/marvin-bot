@@ -1,7 +1,7 @@
 # Marvin Bot
 
-This is an example to build a chatbot on Facebook Messenger using Flask, RiveScript
-and Redis as a session storage.
+This is an example that shows how deploy a chatbot on Facebook Messenger using Flask,
+[RiveScript](https://www.rivescript.com/docs/tutorial) and Redis as a session storage.
 
 ## Deploying to Heroku
 
@@ -14,3 +14,8 @@ heroku addons:create heroku-redis:hobby-dev -a sushi
 heroku git:remote -a bot
 git push heroku master
 ```
+
+## Demo
+
+![Demo](https://github.com/magrathealabs/marvin-bot/blob/master/docs/images/demo.gif "Demo")
+
