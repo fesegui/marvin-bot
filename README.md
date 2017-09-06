@@ -1,5 +1,6 @@
 # Marvin, the Paranoid Android
 
+[![Code Climate](https://codeclimate.com/github/magrathealabs/marvin-bot/badges/gpa.svg)](https://codeclimate.com/github/magrathealabs/marvin-bot)
 [![license](https://img.shields.io/github/license/magrathealabs/mlabs-messenger.svg)](https://github.com/magrathealabs/mlabs-messenger/blob/master/LICENSE)
 
 This is an example that shows how to deploy a chatbot on Facebook Messenger using Flask,
