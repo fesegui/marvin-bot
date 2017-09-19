@@ -32,15 +32,29 @@ def handle_verification():
 @app.route('/', methods=['POST'])
 def handle_messages():
     message_entries = json.loads(request.data.decode('utf8'))['entry']
+
     for entry in message_entries:
         for message in entry['messaging']:
+            sender_id = message['sender']['id']
+
             if message.get('message'):
                 print('[INFO] message:', message)
-                sender_id = message['sender']['id']
                 text = message['message']['text']
                 reply = bot.reply(sender_id, text)
                 print('[INFO] reply:', reply)
                 client.send(sender_id, TextMessage(reply))
+
+            elif message.get('postback'):
+                elif message['postback'].get('referral'):
+                    if message['postback']['referral']['ref'] == 'udesc-palestra-bots':
+                        reply = 'E aí, cara! Eu sou o Marvin! ' + \
+                                'Tô te mandando o link da palestra que ' + \
+                                'tá rolando agora. Acessa aí :D'
+                        url = os.environ.get('PRESENTATION_URL')
+                        print('[INFO] message:', message['postback']['referral']['ref'])
+                        print('[INFO] reply:', reply + '\n' + url)
+                        client.send(sender_id, TextMessage(reply))
+                        client.send(sender_id, TextMessage(url))
     return 'OK'
 
 if __name__ == '__main__':
