@@ -12,9 +12,8 @@ from bot import Bot
 
 FACEBOOK_PAGE_TOKEN = os.environ.get('FACEBOOK_PAGE_TOKEN')
 FACEBOOK_VERIFICATION_TOKEN = os.environ.get('FACEBOOK_VERIFICATION_TOKEN')
-PRESENTATION_URL = os.environ.get('PRESENTATION_URL', 'https://www.google.com.br/')
-PRESENTATION_MESSAGE = 'E aí, cara! Eu sou o Marvin! Tô te mandando o link da palestra que ' + \
-                       'tá rolando agora. Acessa aí :D'
+PRESENTATION_URL = os.environ.get('PRESENTATION_URL', 'http://www.magrathealabs.com/decks/20170921-chatbots/')
+PRESENTATION_MESSAGE = os.environ.get('PRESENTATION_MESSAGE', 'Opa! Eu sou o Marvin! Tô te mandando o link da palestra sobre ChatBots da galera da MLabs. Acessa aí :D')
 
 app = Flask(__name__)
 bot = Bot()
