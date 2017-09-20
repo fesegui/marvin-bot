@@ -1,9 +1,0 @@
-// Learn stuff about our users.
-
-! var botdeck = http:\/\/www.magrathealabs.com/decks/20170921-chatbots
-
-+ * (apresentação|slide|slides|deck|speakerdeck|presentation) *
-- Os slides da apresentação: <get botdeck> :)
-
-+ * (apresentação|slide|slides|deck|speakerdeck) * (chatbots|bots|chat) *
-- Os slides da apresentação: <get botdeck> :)

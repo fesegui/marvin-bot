@@ -1,5 +1,17 @@
 // Open questions/frases
 
++ (palestra|apresentacao|apresentação|slide|slides|deck|speakerdeck|presentation)
+- Os slides da apresentação: www.magrathealabs.com/decks/20170921-chatbots :)
+
++ * (palestra|apresentacao|apresentação|slide|slides|deck|speakerdeck|presentation)
+- Os slides da apresentação: www.magrathealabs.com/decks/20170921-chatbots :)
+
++ (palestra|apresentacao|apresentação|slide|slides|deck|speakerdeck|presentation) *
+- Os slides da apresentação: www.magrathealabs.com/decks/20170921-chatbots :)
+
++ * (palestra|apresentacao|apresentação|slide|slides|deck|speakerdeck|presentation) *
+- Os slides da apresentação: www.magrathealabs.com/decks/20170921-chatbots :)
+
 + *
 - Vish, ainda estou aprendendo a falar com humanos, desculpa, não entendi :(
 - Sou um bot aprendendo, não entendi o que você quiz dizer :|
