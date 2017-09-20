@@ -10,8 +10,8 @@ from messenger.content_types import TextMessage
 from bot import Bot
 
 
-FACEBOOK_PAGE_TOKEN = os.environ.get('FACEBOOK_VERIFICATION_TOKEN')
-FACEBOOK_VERIFICATION_TOKEN = os.environ.get('FACEBOOK_PAGE_TOKEN')
+FACEBOOK_PAGE_TOKEN = os.environ.get('FACEBOOK_PAGE_TOKEN')
+FACEBOOK_VERIFICATION_TOKEN = os.environ.get('FACEBOOK_VERIFICATION_TOKEN')
 PRESENTATION_URL = os.environ.get('PRESENTATION_URL', 'https://www.google.com.br/')
 PRESENTATION_MESSAGE = 'E aí, cara! Eu sou o Marvin! Tô te mandando o link da palestra que ' + \
                        'tá rolando agora. Acessa aí :D'
@@ -47,13 +47,13 @@ def handle_messages():
                 client.send(sender_id, TextMessage(reply))
             elif message.get('postback'):
                 if message['postback'].get('referral'):
-                    if message['postback']['referral']['ref'] == 'udesc-palestra-bots':
+                    if message['postback']['referral']['ref'] == 'palestra-bots':
                         print('[INFO] message:', message['postback']['referral']['ref'])
                         print('[INFO] reply:', PRESENTATION_MESSAGE + '\n' + PRESENTATION_URL)
                         client.send(sender_id, TextMessage(PRESENTATION_MESSAGE))
                         client.send(sender_id, TextMessage(PRESENTATION_URL))
             elif message.get('referral'):
-                if message['referral']['ref'] == 'udesc-palestra-bots':
+                if message['referral']['ref'] == 'palestra-bots':
                     print('[INFO] message:', message['referral']['ref'])
                     print('[INFO] reply:', PRESENTATION_MESSAGE + '\n' + PRESENTATION_URL)
                     client.send(sender_id, TextMessage(PRESENTATION_MESSAGE))
