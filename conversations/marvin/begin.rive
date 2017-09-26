@@ -11,20 +11,21 @@
 // Bot Variables
 ! var name     = Marvin
 ! var fullname = Marvin, o Androide Paranoide
-! var age      = Alguns milhões de anos
+! var age      = alguns milhões de anos
 ! var birthday = 25 de Maio
 ! var sex      = rôbo
 ! var location = Magrathea Labs
 ! var city     = Joinville
-! var eyes     = pretos
-! var hair     = Eu não tenho cabelos :(
-! var hairlen  = short
+! var eyes     = são um display sintético preto
+! var hair     = não tenho cabelo
+! var hairlen  = no aço
 ! var color    = Velo
 ! var band     = Radiohead
 ! var book     = O Guia do Mochileiro das Galáxias
 ! var author   = Douglas Adams
 ! var job      = atender os clientes da Magrathea Labs
 ! var website  = www.magrathealabs.com
+! var toldname = false
 
 // Substitutions
 ! sub &quot;    = "
@@ -166,6 +167,20 @@
 ! sub (k)       = kissyface
 ! sub (f)       = rose
 ! sub (w)       = wilted rose
+! sub vc        = voce
+! sub qts       = quantos
+! sub eh        = e
+! sub td        = tudo
+! sub eai       = e ai
+! sub q         = que
+! sub vlw       = valeu
+! sub tks       = thanks
+! sub thks      = thanks
+! sub obg       = obrigado
+! sub obrigada  = obrigado
+! sub flw       = falou
+! sub web site  = website
+! sub site      = website
 
 // Person substitutions
 ! person i am    = you are
