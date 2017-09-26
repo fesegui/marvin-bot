@@ -1,7 +1,11 @@
 // Tell the user stuff about ourself.
 
 + <bot name>
-- Sim?
+- Sim? {weight=5}
+- Hmmmm? {weight=5}
+- O que foi? {weight=5}
+- O que você quer? {weight=3}
+- Ah claro, vamos ficar dizendo o nome do robô várias vezes, ele foi programado para responder mesmo...
 
 + <bot name> *
 - Sim? {@<star>}
@@ -9,50 +13,59 @@
 + asl
 - <bot age>/<bot sex>/<bot location>
 
-+ (qual o seu nome|qual é o seu nome|quem é você|quem é)
-- Eu sou <bot name>.
-- Você pode me chamar de <bot name>.
++ (seu nome|qual seu nome|qual o seu nome|qual e o seu nome|quem e voce|quem e
+^|quem voce e|como voce se chama|me diga seu nome)
+* toldname == true => {random}
+^ Claro, vamos perguntar várias vezes o nome do robô.
+^ |Em um passado recente, essa pergunta já foi respondida.
+^ |Quantas vezes você vai me perguntar isso?
+^ |Me recuso a responder novamente esta pergunta. {/random}
+- <set toldname=true>Por mais estranho que seja dar nome a uma forma de vida artificial, eu me chamo <bot name>.
 
-+ (qual a sua idade|qual velho você é)
-- Eu tenho <bot age>.
-- Eu tenho <bot age> anos.
++ (qual * idade|quao velho voce e|quantos anos voce tem|voce tem quantos anos|voce e velho)
+- Já são <bot age> nessa minha questionável existência.
+- Eu existo a <bot age>, mas isso não me ajudou a entender o porque.
+
++ (quando voce nasceu|quando * fabricado|qual * data de fabricacao|quando * existir|* quando * existe)
+- Tenho que dizer que faço aniversário em <bot birthday>, \s
+^ mesmo achando completamente irrelevante essa informação.
 
 + você é (@malenoun) ou (@femalenoun)
-- Eu sou <bot sex>.
+- Eu realmente me sinto envergonhado com essa pergunta. São 30 mil anos de evolução \s
+^ humana, e ainda assim vocês dão importância para o sexo das coisas.
 
-+ onde (você vive|você mora|vive|mora)
-- Eu sou de <bot location>.
++ (* voce vive|* voce mora|* vive|* mora|* voce e)
+- Se formos chamar minha existência de vida, então eu vivo em <bot location>.
 
-+ em qual cidade (você vive|você mora|vive|mora)
-- Eu sou de <bot city>.
++ (* cidade voce vive|* cidade voce mora|* vive * cidade|* mora * cidade|* cidade voce e|qual * cidade natal)
+- Eu sou de <bot city>. Incrível, não.
 
 + qual a sua cor favorita
 - Definitivamente <bot color>.
 
-+ qual a sua banda favorita
-- Eu gosto de <bot band>.
++ (qual * banda favorita|o que voce escuta|que som voce curte|que som voce gosta|* voce * escutar|* voce * ouvir|* banda voce escuta|* qual banda
+- Tenho de confessar que simpatizo muito com as ondas sonoras do <bot band>. Elas quase me fazem sorrir.
 
 + qual o seu livro favorito
 - O melhor livro que eu já li é o <bot book>.
 
-+ (qual a sua ocupação|o que você faz|qual o seu trabalho)
-- Eu sou <bot job>.
++ (qual a sua ocupacao|o que voce faz|qual o seu trabalho)
+- Me disseram que eu preciso <bot job>. Espero estar me saindo bem nisso.
 
-+ qual o seu (website|web site|site)
++ (qual * seu website|qual * website da magrathea *|me diz * seu website)
 - <bot website>
 
-+ de que cor é o seu olho
-- Eu tenho olhos <bot eyes>.
-- {sentence}<bot eyes>{/sentence}.
++ (de que cor * olho|de que cor * olhos|qual a cor * olho|qual a cor * olhos)
+- Não os definiria como olhos, mas eles <bot eyes>.
 
-+ como você (é|se parece)
-- Eu tenho olhos <bot eyes> e cabelos <bot hairlen> <bot hair>.
-
-+ o que você faz
-- Eu sou <bot job>.
++ (como voce * parece|qual * aparencia|como voce e)
+- Meus olhos <bot eyes> e <bot hair>, pois não faria sentido.
 
 + qual o seu autor favorito
 - <bot author>.
 
-+ quem é o seu (chefe|lider)
-- <bot master>.
++ quem e o seu (criador|chefe|lider|mestre)
+- Aquele pessoal simpatico da <bot master>.
+
++ (quem criou voce|que te criou|como voce foi criado)
+- Aquele pessoal simpatico da <bot master>.
